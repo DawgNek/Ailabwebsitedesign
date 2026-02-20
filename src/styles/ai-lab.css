@@ -1,0 +1,231 @@
+/* AI Lab Ultra Futuristic Styles */
+
+:root {
+  /* Deep Void Colors */
+  --deep-void: #0B0E13;
+  --void-mid: #11151C;
+  --void-light: #1A1F2B;
+  
+  /* Titanium Gradient */
+  --titanium-1: #2B2F38;
+  --titanium-2: #3A404C;
+  --titanium-3: #4B5263;
+  
+  /* AI Energy Accent */
+  --electric-blue: #3FA9FF;
+  --soft-cyan: #5CE1E6;
+  --ultra-purple: #8B7CFF;
+  
+  /* Glass Effect */
+  --glass-blur: 80px;
+  --glass-opacity: 0.2;
+}
+
+/* Energy Grid Background */
+.energy-grid {
+  background-image: 
+    linear-gradient(rgba(63, 169, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 169, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 0 0;
+  animation: grid-flow 20s linear infinite;
+}
+
+@keyframes grid-flow {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+/* Liquid Titanium Glass */
+.liquid-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(43, 47, 56, 0.3) 0%,
+    rgba(58, 64, 76, 0.2) 50%,
+    rgba(75, 82, 99, 0.15) 100%
+  );
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.liquid-glass-elevated {
+  background: linear-gradient(
+    135deg,
+    rgba(43, 47, 56, 0.4) 0%,
+    rgba(58, 64, 76, 0.3) 50%,
+    rgba(75, 82, 99, 0.25) 100%
+  );
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 12px 48px 0 rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+/* AI Core Glow */
+.ai-core-glow {
+  box-shadow: 
+    0 0 60px rgba(63, 169, 255, 0.3),
+    0 0 120px rgba(92, 225, 230, 0.2),
+    0 0 180px rgba(139, 124, 255, 0.1);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 60px rgba(63, 169, 255, 0.3),
+      0 0 120px rgba(92, 225, 230, 0.2),
+      0 0 180px rgba(139, 124, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 80px rgba(63, 169, 255, 0.4),
+      0 0 140px rgba(92, 225, 230, 0.3),
+      0 0 200px rgba(139, 124, 255, 0.15);
+  }
+}
+
+/* Energy Line Sweep */
+.energy-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-sweep::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(63, 169, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease-out;
+}
+
+.energy-sweep:hover::before {
+  left: 100%;
+}
+
+/* Holographic Gradient */
+.holographic {
+  background: linear-gradient(
+    135deg,
+    rgba(63, 169, 255, 0.2) 0%,
+    rgba(92, 225, 230, 0.15) 50%,
+    rgba(139, 124, 255, 0.2) 100%
+  );
+  box-shadow: 
+    0 0 40px rgba(92, 225, 230, 0.4),
+    inset 0 0 40px rgba(63, 169, 255, 0.1);
+}
+
+/* Noise Texture */
+.noise-texture {
+  position: relative;
+}
+
+.noise-texture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Overdrive Mode */
+.overdrive-mode .energy-grid {
+  background-image: 
+    linear-gradient(rgba(63, 169, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 169, 255, 0.08) 1px, transparent 1px);
+  animation: grid-flow 10s linear infinite;
+}
+
+.overdrive-mode .ai-core-glow {
+  animation: pulse-glow-intense 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-intense {
+  0%, 100% {
+    box-shadow: 
+      0 0 80px rgba(63, 169, 255, 0.5),
+      0 0 160px rgba(92, 225, 230, 0.4),
+      0 0 240px rgba(139, 124, 255, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 120px rgba(63, 169, 255, 0.6),
+      0 0 200px rgba(92, 225, 230, 0.5),
+      0 0 280px rgba(139, 124, 255, 0.4);
+  }
+}
+
+/* Floating Animation */
+@keyframes float-ambient {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-ambient {
+  animation: float-ambient 8s ease-in-out infinite;
+}
+
+/* Particle Field */
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(63, 169, 255, 0.6);
+  border-radius: 50%;
+  animation: particle-float linear infinite;
+}
+
+/* Energy Ring */
+@keyframes rotate-ring {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.energy-ring {
+  animation: rotate-ring 20s linear infinite;
+}
